@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    body{
+        @apply bg-slate-200;
+    }
+    tr,th,td{
+        @apply border border-gray-200 p-2;
+    }
+
+    th{
+        @apply bg-gray-200
+    }
+}
