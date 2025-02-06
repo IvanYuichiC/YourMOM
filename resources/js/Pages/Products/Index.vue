@@ -16,6 +16,12 @@ defineProps({
     type: String,
     required: false,
   },
+  methods: {
+    backToCat(){
+
+        Inertia.get('/');
+    }
+  }
 });
 </script>
 
@@ -37,8 +43,10 @@ defineProps({
     <!-- Main Content -->
     <div class="w-3/4 p-6">
       <h1 class="text-center text-3xl font-semibold mb-6 text-blue-800">{{ selectedCategory ? selectedCategory.name : "All Products" }}</h1>
-
-      <!-- Product Table -->
+      <Link :href="'/'" style="color: blue; text-decoration: underline;">
+        Back to categories
+      </Link>
+            <!-- Product Table -->
       <div class="overflow-x-auto shadow rounded-lg">
         <table class="w-full table-auto border border-gray-300 bg-white">
           <thead>
